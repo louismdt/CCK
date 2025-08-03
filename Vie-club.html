@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Châteaubourg Canoë Kayak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-placeholder">
+                    <img src="img/Logo_club_transparent.png" alt="Châteaubourg Canoë Kayak Logo" class="logo-image">
+                </div>
+                <h1 class="logo-font">Châteaubourg Canoë Kayak</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="Index.html">Accueil</a></li>
+                    <li><a href="Activites.html">Activités</a></li>
+                    <li><a href="Vie-club.html">Vie du club</a></li>
+                    <li><a href="Liens.html">Liens</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Vie du club -->
+        <div id="vie-club" class="page active">
+            <div class="container">
+                <section>
+                    <h2>Vie du Club</h2>
+                    
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h3>Horaires</h3>
+                            <p><strong>Entraînements :</strong><br>
+                            Samedi : 14h - 17h  (hors vacances scolaire)<br>
+                        </div>
+
+                        <div class="card">
+                            <h3>Saison 2025-2026</h3>
+                            <p><strong>Début de saison :</strong> 06 septembre 2024<br>
+                            <strong>Fin de saison :</strong> 27 juin 2026<br>
+                            <strong>Inscriptions :</strong> Du 1er au 30 septembre<br>
+                        </div>
+                    </div>
+
+                    <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--blue);">Nos Encadrants</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4>Baptiste</h4>
+                            <p><strong>Moniteur (MFPC)</strong><br>
+                            XX ans d'expérience</p>
+                        </div>
+                        <div class="card">
+                            <h4>Maxime</h4>
+                            <p><strong>Moniteur (MFPC)</strong><br>
+                            XX ans d'expérience</p>
+                        </div>
+                        <div class="card">
+                            <h4>Thomas</h4>
+                            <p><strong>Aspirant Moniteur (AMFPC)</strong><br>
+                            XX ans d'expérience</p>
+                        </div>
+                        <div class="card">
+                            <h4>Louis</h4>
+                            <p><strong>Aspirant Moniteur (AMFPC)</strong><br>
+                            XX ans d'expérience</p>
+                        </div>
+                        <div class="card">
+                            <h4>Cyrille</h4>
+                            <p><strong>Aspirant Moniteur (AMFPC)</strong><br>
+                            XX ans d'expérience</p>
+                        </div>
+                    </div>
+
+                    <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--blue);">Bureau du Club</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4>Ronan CHERAIS</h4>
+                            <p><strong>Président</strong></p>
+                        </div>
+                        <div class="card">
+                            <h4>Cyril BUSNEL</h4>
+                            <p><strong>Secrétaire</strong></p>
+                        </div>
+                        <div class="card">
+                            <h4>Maxime DELAUNAY</h4>
+                            <p><strong>Trésorier</strong></p>
+                        </div>
+                    </div>
+
+                    <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--blue);">Où nous trouver</h3>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <div style="background: var(--light-gray); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                            <p><strong>Club de Kayak de Châteaubourg</strong><br>
+                            11 rue Louis Pasteur<br>
+                            (au fond du parc pasteur)<br>
+                            35220 Châteaubourg</p>
+                            <p style="margin-top: 1rem; font-style: italic;">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396.88340698325624!2d-1.408225542838506!3d48.10781770680573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ed56306e1fe41%3A0x1f070fc41dcabd0e!2sClub%20de%20kayak%20CCK%20Ch%C3%A2teaubourg!5e0!3m2!1sfr!2sfr!4v1754225830276!5m2!1sfr!2sfr"
+                                width="600"
+                                height="450"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Châteaubourg Canoë Kayak - Tous droits réservés</p>
+            <p>Site créé avec passion pour promouvoir les sports nautiques</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

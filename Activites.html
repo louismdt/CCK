@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Châteaubourg Canoë Kayak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-placeholder">
+                    <img src="img/Logo_club_transparent.png" alt="Châteaubourg Canoë Kayak Logo" class="logo-image">
+                </div>
+                <h1 class="logo-font">Châteaubourg Canoë Kayak</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="Index.html">Accueil</a></li>
+                    <li><a href="Activites.html">Activités</a></li>
+                    <li><a href="Vie-club.html">Vie du club</a></li>
+                    <li><a href="Liens.html">Liens</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Activités -->
+        <div id="activites" class="page active">
+            <div class="container">
+                <section>
+                    <h2>Nos Activités</h2>
+                    <div class="submenu">
+                        <button class="active" onclick="showActivity('rivieres', event)">Rivières</button>
+                        <button onclick="showActivity('mer', event)">Mer</button>
+                        <button onclick="showActivity('esquimautage', event)">Initiation Esquimautage</button>
+                        <button onclick="showActivity('polo', event)">Kayak Polo</button>
+                    </div>
+
+                    <div id="randonnees" class="activity-content active">
+                        <h3>Sorties Rivières</h3>
+                        <p>Descendez les rivières locales dans une ambiance conviviale. Nos sorties rivières sont l'occasion parfaite de découvrir la navigation en eau vive ou lors de randonnées.</p>
+                        <ul>
+                            <li>Randonnées pour tout niveaux</li>
+                            <li>Apprentissage des techniques de navigation</li>
+                            <li>Rivières du Grand Ouest</li>
+                            <li>Différents niveaux de difficulté</li>
+                            <li>Sorties selon les conditions météorologiques</li>
+                        </ul>
+                    </div>
+
+                    <div id="mer" class="activity-content">
+                        <h3>Kayak de Mer</h3>
+                        <p>Explorez la côte bretonne en kayak de mer ! Une activité unique pour découvrir des paysages marins exceptionnels, des criques cachées et observer la vie marine.</p>
+                        <ul>
+                            <li>Sorties adaptées à tous les niveaux</li>
+                            <li>Découverte des côtes bretonnes</li>
+                            <li>Matériel spécialisé mer fourni</li>
+                            <li>Respect des conditions météorologiques</li>
+                        </ul>
+                    </div>
+
+                    <div id="esquimautage" class="activity-content">
+                        <h3>Initiation Esquimautage</h3>
+                        <p>Apprenez la technique du retournement esquimau ! Cette compétence essentielle vous permettra de gagner en autonomie et en sécurité sur l'eau.</p>
+                        <ul>
+                            <li>Cours en piscine pour débuter</li>
+                            <li>Progression adaptée à chacun</li>
+                            <li>Matériel adapté à l'apprentissage</li>
+                            <li>Moniteurs spécialisés</li>
+                        </ul>
+                    </div>
+
+                    <div id="polo" class="activity-content">
+                        <h3>Kayak Polo</h3>
+                        <p>Sport collectif dynamique et spectaculaire ! Le kayak polo combine habiletés techniques du kayak et esprit d'équipe dans un sport aquatique unique.</p>
+                        <ul>
+                            <li>Sport mixte et intergénérationnel</li>
+                            <li>Entraînements réguliers</li>
+                            <li>Participation aux championnats</li>
+                            <li>Matériel spécialisé fourni</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Châteaubourg Canoë Kayak - Tous droits réservés</p>
+            <p>Site créé avec passion pour promouvoir les sports nautiques</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

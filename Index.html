@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Châteaubourg Canoë Kayak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,17 +12,19 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <div class="logo-placeholder">CK</div>
+                <div class="logo-placeholder">
+                    <img src="img/Logo_club_transparent.png" alt="Châteaubourg Canoë Kayak Logo" class="logo-image">
+                </div>
                 <h1 class="logo-font">Châteaubourg Canoë Kayak</h1>
             </div>
             <nav>
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
                 <ul id="nav-menu">
-                    <li><a href="#" onclick="showPage('accueil')">Accueil</a></li>
-                    <li><a href="#" onclick="showPage('activites')">Activités</a></li>
-                    <li><a href="#" onclick="showPage('vie-club')">Vie du club</a></li>
-                    <li><a href="#" onclick="showPage('liens')">Liens</a></li>
-                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    <li><a href="Index.html" onclick="showPage('accueil')">Accueil</a></li>
+                    <li><a href="Activites.html">Activités</a></li>
+                    <li><a href="Vie-club.html">Vie du club</a></li>
+                    <li><a href="Liens.html">Liens</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,8 +36,8 @@
             <section class="hero">
                 <div class="container">
                     <h2 class="logo-font">Bienvenue au Club de Canoë-Kayak</h2>
-                    <p>Découvrez les plaisirs de la navigation sur les rivières et en mer avec notre club convivial et dynamique</p>
-                    <a href="#" class="cta-button" onclick="showPage('activites')">Découvrir nos activités</a>
+                    <p>Situez à Châteaubourg, venez découvrir les plaisirs de la navigation sur rivières et en mer au sein de notre club</p>
+                    <a href="Activites.html" class="cta-button" onclick="showPage('activites')">Découvrir nos activités</a>
                 </div>
             </section>
 
@@ -43,248 +46,29 @@
                     <h2>Nos activités</h2>
                     <div class="cards-grid">
                         <div class="card">
-                            <div class="card-icon">🚣</div>
-                            <h3>Randonnées</h3>
-                            <p>Explorez les plus beaux cours d'eau de la région lors de nos sorties randonnées en groupe.</p>
+                            <div class="card-icon">🥇</div>
+                            <h3>Pagaies Couleur</h3>
+                            <p>Faites le passage de pagaies couleur pour confirmer votre niveau.</p>
                         </div>
                         <div class="card">
                             <div class="card-icon">🌊</div>
                             <h3>Kayak de mer</h3>
-                            <p>Vivez l'aventure en mer avec nos sorties kayak sur la côte bretonne.</p>
+                            <p>Vivez l'aventure en mer avec nos sorties kayak sur la côte Bretonne.</p>
                         </div>
                         <div class="card">
-                            <div class="card-icon">🏞️</div>
-                            <h3>Sorties rivières</h3>
-                            <p>Descendez les rivières locales dans une ambiance conviviale et sécurisée.</p>
+                            <div class="card-icon">🚣</div>
+                            <h3>Rivières</h3>
+                            <p>Randonnées ou eau vive en fonction de votre niveau et de votre adaptabilité, descendez des rivières de façon plus sportives.</p>
                         </div>
                         <div class="card">
                             <div class="card-icon">🤸</div>
                             <h3>Esquimautage</h3>
-                            <p>Apprenez les techniques de retournement et perfectionnez votre maîtrise du kayak.</p>
+                            <p>Grâce à un accès à la piscine de Vitré, nous proposons dans un cadre calme et sécurisé, des séances d'esquimautage. Pouvoir apprendre et peaufiner sa tecnhique de retournement pour perfectionner sa maitrise du kayak n'aura jamais été aussi agréable.</p>
                         </div>
                         <div class="card">
-                            <div class="card-icon">⚽</div>
+                            <div class="card-icon">🏐</div>
                             <h3>Kayak polo</h3>
-                            <p>Sport collectif dynamique mêlant kayak et ballon dans une ambiance fair-play.</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- Page Activités -->
-        <div id="activites" class="page">
-            <div class="container">
-                <section>
-                    <h2>Nos Activités</h2>
-                    <div class="submenu">
-                        <button class="active" onclick="showActivity('randonnees')">Randonnées</button>
-                        <button onclick="showActivity('mer')">Mer</button>
-                        <button onclick="showActivity('rivières')">Sorties Rivières</button>
-                        <button onclick="showActivity('esquimautage')">Initiation Esquimautage</button>
-                        <button onclick="showActivity('polo')">Kayak Polo</button>
-                    </div>
-
-                    <div id="randonnees" class="activity-content active">
-                        <h3>Randonnées en Canoë-Kayak</h3>
-                        <p>Nos randonnées vous emmènent à la découverte des plus beaux paysages aquatiques de la région. Que vous soyez débutant ou confirmé, nos encadrants diplômés vous accompagnent pour des sorties inoubliables.</p>
-                        <ul>
-                            <li>Sorties d'une demi-journée ou journée complète</li>
-                            <li>Découverte de la faune et de la flore</li>
-                            <li>Matériel fourni (kayak, pagaie, gilet de sauvetage)</li>
-                            <li>Encadrement par des moniteurs qualifiés</li>
-                        </ul>
-                    </div>
-
-                    <div id="mer" class="activity-content">
-                        <h3>Kayak de Mer</h3>
-                        <p>Explorez la côte bretonne en kayak de mer ! Une activité unique pour découvrir des paysages marins exceptionnels, des criques cachées et observer la vie marine.</p>
-                        <ul>
-                            <li>Sorties adaptées à tous les niveaux</li>
-                            <li>Découverte des côtes bretonnes</li>
-                            <li>Matériel spécialisé mer fourni</li>
-                            <li>Respect des conditions météorologiques</li>
-                        </ul>
-                    </div>
-
-                    <div id="rivières" class="activity-content">
-                        <h3>Sorties Rivières</h3>
-                        <p>Descendez les rivières locales dans une ambiance conviviale. Nos sorties rivières sont l'occasion parfaite de découvrir la navigation en eau vive.</p>
-                        <ul>
-                            <li>Différents niveaux de difficulté</li>
-                            <li>Rivières de la région Bretagne</li>
-                            <li>Apprentissage des techniques de navigation</li>
-                            <li>Sorties régulières selon la saison</li>
-                        </ul>
-                    </div>
-
-                    <div id="esquimautage" class="activity-content">
-                        <h3>Initiation Esquimautage</h3>
-                        <p>Apprenez la technique du retournement esquimau ! Cette compétence essentielle vous permettra de gagner en autonomie et en sécurité sur l'eau.</p>
-                        <ul>
-                            <li>Cours en piscine pour débuter</li>
-                            <li>Progression adaptée à chacun</li>
-                            <li>Matériel adapté à l'apprentissage</li>
-                            <li>Moniteurs spécialisés</li>
-                        </ul>
-                    </div>
-
-                    <div id="polo" class="activity-content">
-                        <h3>Kayak Polo</h3>
-                        <p>Sport collectif dynamique et spectaculaire ! Le kayak polo combine habiletés techniques du kayak et esprit d'équipe dans un sport aquatique unique.</p>
-                        <ul>
-                            <li>Sport mixte et intergénérationnel</li>
-                            <li>Entraînements réguliers</li>
-                            <li>Participation aux championnats</li>
-                            <li>Matériel spécialisé fourni</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- Page Vie du club -->
-        <div id="vie-club" class="page">
-            <div class="container">
-                <section>
-                    <h2>Vie du Club</h2>
-                    
-                    <div class="cards-grid">
-                        <div class="card">
-                            <h3>Horaires</h3>
-                            <p><strong>Entraînements :</strong><br>
-                            Mercredi : 18h - 20h<br>
-                            Samedi : 14h - 17h<br>
-                            Dimanche : 9h - 12h</p>
-                            <p><strong>Permanences :</strong><br>
-                            Mercredi : 18h - 19h<br>
-                            Samedi : 13h30 - 14h</p>
-                        </div>
-
-                        <div class="card">
-                            <h3>Saison 2024-2025</h3>
-                            <p><strong>Début de saison :</strong> 15 septembre 2024<br>
-                            <strong>Fin de saison :</strong> 30 juin 2025<br>
-                            <strong>Inscriptions :</strong> Du 1er au 30 septembre<br>
-                            <strong>Assemblée générale :</strong> 20 octobre 2024</p>
-                        </div>
-                    </div>
-
-                    <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--blue);">Nos Encadrants</h3>
-                    <div class="cards-grid">
-                        <div class="card">
-                            <h4>Jean Dupont</h4>
-                            <p><strong>Président & Moniteur</strong><br>
-                            Brevet d'État Canoë-Kayak<br>
-                            15 ans d'expérience</p>
-                        </div>
-                        <div class="card">
-                            <h4>Marie Martin</h4>
-                            <p><strong>Monitrice Kayak de Mer</strong><br>
-                            Initiateur Fédéral<br>
-                            Spécialiste navigation côtière</p>
-                        </div>
-                        <div class="card">
-                            <h4>Pierre Moreau</h4>
-                            <p><strong>Entraîneur Kayak Polo</strong><br>
-                            CQP Canoë-Kayak<br>
-                            Ex-joueur équipe de France</p>
-                        </div>
-                    </div>
-
-                    <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--blue);">Bureau du Club</h3>
-                    <div class="cards-grid">
-                        <div class="card">
-                            <h4>Jean Dupont</h4>
-                            <p><strong>Président</strong></p>
-                        </div>
-                        <div class="card">
-                            <h4>Sophie Leclerc</h4>
-                            <p><strong>Secrétaire</strong></p>
-                        </div>
-                        <div class="card">
-                            <h4>Michel Durand</h4>
-                            <p><strong>Trésorier</strong></p>
-                        </div>
-                    </div>
-
-                    <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--blue);">Où nous trouver</h3>
-                    <div style="text-align: center; margin: 2rem 0;">
-                        <div style="background: var(--light-gray); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                            <p><strong>Base nautique de Châteaubourg</strong><br>
-                            Étang de Châteaubourg<br>
-                            35220 Châteaubourg</p>
-                            <p style="margin-top: 1rem; font-style: italic;">Carte Google Maps à intégrer ici</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- Page Liens -->
-        <div id="liens" class="page">
-            <div class="container">
-                <section>
-                    <h2>Suivez-nous</h2>
-                    <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">
-                        Restez connectés avec le club sur nos réseaux sociaux
-                    </p>
-                    <div class="social-links">
-                        <a href="https://facebook.com" class="social-link facebook" target="_blank" rel="noopener">
-                            📘
-                        </a>
-                        <a href="https://instagram.com" class="social-link instagram" target="_blank" rel="noopener">
-                            📷
-                        </a>
-                        <a href="https://youtube.com" class="social-link youtube" target="_blank" rel="noopener">
-                            📺
-                        </a>
-                    </div>
-                    <p style="text-align: center; margin-top: 3rem; color: var(--blue);">
-                        Partagez vos photos de sorties avec le hashtag <strong>#ChateaubourgCK</strong>
-                    </p>
-                </section>
-            </div>
-        </div>
-
-        <!-- Page Contact -->
-        <div id="contact" class="page">
-            <div class="container">
-                <section>
-                    <h2>Contactez-nous</h2>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
-                            <h3>Téléphone</h3>
-                            <a href="tel:+33299999999">02 99 99 99 99</a>
-                        </div>
-                        <div class="contact-item">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
-                            <h3>Email</h3>
-                            <a href="mailto:contact@chateaubourg-ck.fr">contact@chateaubourg-ck.fr</a>
-                        </div>
-                        <div class="contact-item">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
-                            <h3>Adresse</h3>
-                            <p>Base nautique de Châteaubourg<br>
-                            Étang de Châteaubourg<br>
-                            35220 Châteaubourg</p>
-                        </div>
-                    </div>
-
-                    <div style="background: var(--light-gray); padding: 3rem; border-radius: 15px; margin: 3rem 0; text-align: center;">
-                        <h3 style="color: var(--blue); margin-bottom: 2rem;">Horaires d'accueil</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: left;">
-                            <div>
-                                <p><strong>Mercredi :</strong> 18h - 19h</p>
-                                <p><strong>Samedi :</strong> 13h30 - 14h</p>
-                                <p><strong>Dimanche :</strong> Sur rendez-vous</p>
-                            </div>
-                            <div>
-                                <p><strong>Vacances scolaires :</strong></p>
-                                <p>Mercredi : 14h - 17h</p>
-                                <p>Samedi : 9h - 12h</p>
-                            </div>
+                            <p>Sport collectif dynamique mêlant kayak et ballon dans une ambiance combativement drôle.</p>
                         </div>
                     </div>
                 </section>

@@ -22,11 +22,12 @@ body {
 
 .logo-font {
     font-family: 'Bebas Neue', cursive;
+    color: var(--white);
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--blue), var(--dark-blue));
+    background: linear-gradient(135deg, var(--white), var(--dark-blue));
     color: white;
     padding: 1rem 0;
     position: sticky;
@@ -40,7 +41,7 @@ header {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
+    gap: 0;
     align-items: center;
 }
 
@@ -48,12 +49,20 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .logo-placeholder {
-    width: 50px;
-    height: 50px;
-    background: var(--orange);
+    width: 150px;
+    height: 150px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -67,12 +76,24 @@ header {
     font-size: 2rem;
     font-weight: 600;
     margin: 0;
+    color : var(--blue)
+}
+
+.logo, nav{
+    flex: 0 0 50%;
+    display : flex;
+    align-items: center;
 }
 
 /* Navigation */
+nav {
+    justify-content: flex-end;
+}
+
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -97,6 +118,28 @@ nav a:hover {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+#nav-menu {
+  display: flex;
+  padding: 0;
+  list-style: none  ;
+  gap: 0;
+  width: 100%;
+}
+
+#nav-menu li {
+  flex: 1; /* chaque li prend une part égale */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-menu a {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
 }
 
 /* Main content */
@@ -126,7 +169,7 @@ main {
 
 /* Hero section */
 .hero {
-    background: linear-gradient(rgba(32, 131, 198, 0.9), rgba(26, 107, 158, 0.9)), 
+    background: linear-gradient(rgba(32, 131, 198, 0.9), rgba(26, 107, 158, 0.9)),
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e6f3ff" width="1200" height="600"/><path fill="%23b3d9ff" d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
     background-size: cover;
     background-position: center;

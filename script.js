@@ -15,18 +15,18 @@ function showPage(pageId) {
 }
 
 // Navigation entre les activités
-function showActivity(activityId) {
+function showActivity(activityId, event) {
     // Hide all activity contents
     const activities = document.querySelectorAll('.activity-content');
     activities.forEach(activity => activity.classList.remove('active'));
-    
+
     // Remove active class from all buttons
     const buttons = document.querySelectorAll('.submenu button');
     buttons.forEach(button => button.classList.remove('active'));
-    
+
     // Show selected activity
     document.getElementById(activityId).classList.add('active');
-    
+
     // Add active class to clicked button
     event.target.classList.add('active');
 }
@@ -59,4 +59,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         card.addEventListener('mouseleave', function() {
-            this.style.transform =
+            this.style.transform = '';

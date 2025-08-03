@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Châteaubourg Canoë Kayak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-placeholder">
+                    <img src="img/Logo_club_transparent.png" alt="Châteaubourg Canoë Kayak Logo" class="logo-image">
+                </div>
+                <h1 class="logo-font">Châteaubourg Canoë Kayak</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="Index.html">Accueil</a></li>
+                    <li><a href="Activites.html">Activités</a></li>
+                    <li><a href="Vie-club.html">Vie du club</a></li>
+                    <li><a href="Liens.html">Liens</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Liens -->
+        <div id="liens" class="page active">
+            <div class="container">
+                <section>
+                    <h2>Suivez-nous</h2>
+                    <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">
+                        Restez connectés avec le club sur nos réseaux sociaux
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/kayak.chateaubourg" class="social-link facebook" target="_blank" rel="noopener">
+                            <span><i class="fab fa-facebook"></i></span>
+                        </a>
+                        <a href="https://www.instagram.com/chateaubourgcanoekayak/m" class="social-link instagram" target="_blank" rel="noopener">
+                            <span><i class="fab fa-instagram"></i></span>
+                        </a>
+                        <a href="https://www.youtube.com/@CCKchateaubourg" class="social-link youtube" target="_blank" rel="noopener">
+                            <span><i class="fab fa-youtube"></i></span>
+                        </a>
+                    </div>
+                    <p style="text-align: center; margin-top: 3rem; color: var(--blue);">
+                        Partagez vos photos de sorties avec le hashtag <strong>#ChateaubourgCK</strong>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Châteaubourg Canoë Kayak - Tous droits réservés</p>
+            <p>Site créé avec passion pour promouvoir les sports nautiques</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
