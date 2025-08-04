@@ -60,3 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = '';
+        });
+    });
+});
