@@ -43,7 +43,7 @@
                         <button onclick="showActivity('polo', event)">Kayak Polo</button>
                     </div>
 
-                    <div id="randonnees" class="activity-content active">
+                    <div id="rivieres" class="activity-content active">
                         <h3>Sorties Rivières</h3>
                         <p>Descendez les rivières locales dans une ambiance conviviale. Nos sorties rivières sont l'occasion parfaite de découvrir la navigation en eau vive ou lors de randonnées.</p>
                         <ul>
@@ -53,6 +53,29 @@
                             <li>Différents niveaux de difficulté</li>
                             <li>Sorties selon les conditions météorologiques</li>
                         </ul>
+                        <div class="carousel-container">
+                            <div class="carousel" id="carousel-rivieres">
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=300&fit=crop" alt="Kayak en rivière">
+                                    <div class="slide-caption">Navigation en eau vive</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1551524164-6cf3ac17fd76?w=600&h=300&fit=crop" alt="Groupe kayak rivière">
+                                    <div class="slide-caption">Sortie groupe en rivière</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=300&fit=crop" alt="Rivière calme">
+                                    <div class="slide-caption">Rivières tranquilles</div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav prev" onclick="changeSlide('rivieres', -1)">‹</button>
+                            <button class="carousel-nav next" onclick="changeSlide('rivieres', 1)">›</button>
+                            <div class="carousel-indicators">
+                                <div class="indicator active" onclick="goToSlide('rivieres', 0)"></div>
+                                <div class="indicator" onclick="goToSlide('rivieres', 1)"></div>
+                                <div class="indicator" onclick="goToSlide('rivieres', 2)"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="mer" class="activity-content">
@@ -63,6 +86,29 @@
                             <li>Découverte des côtes bretonnes</li>
                             <li>Une flotte de kayak de mer</li>
                         </ul>
+                        <div class="carousel-container">
+                            <div class="carousel" id="carousel-mer">
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1594736797933-d0f7a8806cef?w=600&h=300&fit=crop" alt="Kayak de mer">
+                                    <div class="slide-caption">Kayak en mer</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1551524164-0c4ac832d1de?w=600&h=300&fit=crop" alt="Côte bretonne">
+                                    <div class="slide-caption">Côtes bretonnes</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1567950690498-58c6c27a7735?w=600&h=300&fit=crop" alt="Groupe mer">
+                                    <div class="slide-caption">Sortie en groupe</div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav prev" onclick="changeSlide('mer', -1)">‹</button>
+                            <button class="carousel-nav next" onclick="changeSlide('mer', 1)">›</button>
+                            <div class="carousel-indicators">
+                                <div class="indicator active" onclick="goToSlide('mer', 0)"></div>
+                                <div class="indicator" onclick="goToSlide('mer', 1)"></div>
+                                <div class="indicator" onclick="goToSlide('mer', 2)"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="esquimautage" class="activity-content">
@@ -73,6 +119,29 @@
                             <li>Progression adaptée à chacun</li>
                             <li>Des encadrants présents à chaque étape</li>
                         </ul>
+                        <div class="carousel-container">
+                            <div class="carousel" id="carousel-esquimautage">
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=300&fit=crop" alt="Esquimautage piscine">
+                                    <div class="slide-caption">Formation en piscine</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=300&fit=crop" alt="Technique esquimautage">
+                                    <div class="slide-caption">Technique d'esquimautage</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1551524164-687a55dd1126?w=600&h=300&fit=crop" alt="Progression esquimautage">
+                                    <div class="slide-caption">Progression personnalisée</div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav prev" onclick="changeSlide('esquimautage', -1)">‹</button>
+                            <button class="carousel-nav next" onclick="changeSlide('esquimautage', 1)">›</button>
+                            <div class="carousel-indicators">
+                                <div class="indicator active" onclick="goToSlide('esquimautage', 0)"></div>
+                                <div class="indicator" onclick="goToSlide('esquimautage', 1)"></div>
+                                <div class="indicator" onclick="goToSlide('esquimautage', 2)"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="polo" class="activity-content">
@@ -81,6 +150,29 @@
                         <ul>
                             <li>Sport mixte et intergénérationnel</li>
                         </ul>
+                        <div class="carousel-container">
+                            <div class="carousel" id="carousel-polo">
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=300&fit=crop" alt="Match kayak polo">
+                                    <div class="slide-caption">Match de kayak polo</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1551524164-75ca2ca0f853?w=600&h=300&fit=crop" alt="Équipe polo">
+                                    <div class="slide-caption">Esprit d'équipe</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=300&fit=crop" alt="Technique polo">
+                                    <div class="slide-caption">Techniques de polo</div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav prev" onclick="changeSlide('polo', -1)">‹</button>
+                            <button class="carousel-nav next" onclick="changeSlide('polo', 1)">›</button>
+                            <div class="carousel-indicators">
+                                <div class="indicator active" onclick="goToSlide('polo', 0)"></div>
+                                <div class="indicator" onclick="goToSlide('polo', 1)"></div>
+                                <div class="indicator" onclick="goToSlide('polo', 2)"></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
