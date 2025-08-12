@@ -54,20 +54,20 @@ header {
 }
 
 .logo-image {
-    width: clamp(80px, 15vw, 150px); /* Taille responsive */
-    height: clamp(80px, 15vw, 150px); /* Même ratio */
+    width: clamp(80px, 15vw, 150px);
+    height: clamp(80px, 15vw, 150px);
     border-radius: 8px;
     object-fit: cover;
 }
 
 .logo-placeholder {
-    width: clamp(80px, 15vw, 150px); /* Taille responsive */
-    height: clamp(80px, 15vw, 150px); /* Même ratio */
+    width: clamp(80px, 15vw, 150px);
+    height: clamp(80px, 15vw, 150px);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(16px, 3vw, 24px); /* Texte responsive */
+    font-size: clamp(16px, 3vw, 24px);
     font-weight: bold;
     color: white;
 }
@@ -77,29 +77,29 @@ header {
     font-weight: 600;
     margin: 0;
     color: var(--blue);
-    white-space: nowrap; /* Empêche le titre de se couper */
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Ajoute ... si trop long */
+    text-overflow: ellipsis;
 }
 
 .logo, nav {
     flex: 0 0 50%;
     display: flex;
     align-items: center;
-    min-width: 0; /* Permet au contenu de se réduire */
+    min-width: 0;
 }
 
 /* Navigation */
 nav {
     justify-content: flex-end;
-    flex-shrink: 0; /* Empêche la nav de rétrécir */
+    flex-shrink: 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: clamp(0.5rem, 2vw, 2rem); /* Gap responsive */
+    gap: clamp(0.5rem, 2vw, 2rem);
     margin: 0;
     padding: 0;
 }
@@ -109,9 +109,9 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    padding: 0.5rem clamp(0.5rem, 1vw, 1rem); /* Padding responsive */
+    padding: 0.5rem clamp(0.5rem, 1vw, 1rem);
     border-radius: 5px;
-    font-size: clamp(0.8rem, 1.5vw, 1rem); /* Taille de police responsive */
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 nav a:hover {
@@ -137,7 +137,7 @@ nav a:hover {
 }
 
 #nav-menu li {
-  flex: 1; /* chaque li prend une part égale */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,9 +323,8 @@ section h2::after {
     animation: fadeIn 0.5s ease-in;
 }
 
-/* ============ CARROUSEL - NOUVEAUX STYLES ============ */
+/* ============ CARROUSEL - STYLES ============ */
 
-/* Styles du carrousel */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -506,207 +505,250 @@ footer {
     margin-top: 4rem;
 }
 
-/* Responsive tablet/desktop intermédiaire - ZONE CRITIQUE */
-@media (max-width: 900px) and (min-width: 769px) {
-    .header-container {
-        padding: 0 0.5rem;
-        min-height: 70px; /* Réduit la hauteur */
-    }
-    
-    .logo {
-        gap: 0.5rem; /* Réduit l'espace logo-titre */
-    }
-    
-    .logo h1 {
-        font-size: clamp(0.9rem, 2.5vw, 1.2rem); /* Plus agressif */
-    }
-    
-    nav ul {
-        gap: clamp(0.3rem, 1vw, 0.8rem); /* Gap très réduit */
-    }
-    
-    nav a {
-        font-size: clamp(0.65rem, 1vw, 0.8rem); /* Police plus petite */
-        padding: 0.3rem clamp(0.2rem, 0.5vw, 0.5rem); /* Padding réduit */
-    }
-}
+/* ============ MEDIA QUERIES SIMPLIFIÉES ============ */
 
-/* NOUVEAU : Zone très critique 825px et moins */
-@media (max-width: 825px) and (min-width: 769px) {
-    .header-container {
-        padding: 0 0.3rem;
-        min-height: 60px;
-    }
-    
-    .logo {
-        gap: 0.3rem;
-        max-width: 60%; /* Limite la largeur du logo */
-    }
-    
-    .logo h1 {
-        font-size: clamp(0.8rem, 2vw, 1rem);
-        max-width: 200px; /* Limite absolue */
-    }
-    
-    nav {
-        max-width: 40%; /* Limite la largeur navigation */
-    }
-    
-    nav ul {
-        gap: 0.2rem;
-        flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
-    }
-    
-    nav a {
-        font-size: 0.65rem;
-        padding: 0.2rem 0.3rem;
-    }
-}
-
-/* Responsive mobile */
-@media (max-width: 768px) {
+/* Tablettes et écrans moyens */
+@media (max-width: 1024px) and (min-width: 769px) {
     .header-container {
         padding: 0 1rem;
     }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 3rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+}
 
+/* ============ RESPONSIVE MOBILE - VERSION CORRIGÉE ============ */
+@media (max-width: 768px) {
+    /* Header container - Forcer l'espacement */
+    .header-container {
+        padding: 0 1rem !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* Logo - Optimisé pour mobile */
+    .logo {
+        flex: 0 1 auto !important;
+        max-width: 70% !important;
+        min-width: 0 !important;
+        gap: 0.5rem !important;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Navigation mobile */
     nav {
-        position: relative;
+        position: relative !important;
+        flex: 0 0 auto !important;
     }
 
+    /* Bouton menu hamburger - FORCER L'AFFICHAGE */
+    .mobile-menu-btn {
+        display: block !important;
+        background: none !important;
+        border: none !important;
+        color: white !important;
+        font-size: 1.5rem !important;
+        cursor: pointer !important;
+        padding: 0.5rem !important;
+        border-radius: 5px !important;
+        min-width: 45px !important;
+        min-height: 40px !important;
+        z-index: 1001 !important;
+    }
+
+    .mobile-menu-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Menu navigation - Caché par défaut */
     #nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--blue);
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        border-radius: 10px;
-        margin-top: 10px;
+        display: none !important;
+        position: absolute !important;
+        top: calc(100% + 15px) !important;
+        right: 0 !important;
+        left: auto !important;
+        background: var(--blue) !important;
+        flex-direction: column !important;
+        padding: 1rem !important;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+        border-radius: 12px !important;
+        min-width: 200px !important;
+        z-index: 1000 !important;
     }
 
+    /* Menu navigation - Visible quand actif */
     #nav-menu.active {
-        display: flex;
+        display: flex !important;
     }
 
     #nav-menu li {
-        flex: none;
-        width: 100%;
+        flex: none !important;
+        width: 100% !important;
+        margin: 0 !important;
     }
 
     #nav-menu a {
-        justify-content: flex-start;
-        padding: 1rem;
-        border-radius: 5px;
-        margin: 0.2rem 0;
+        justify-content: center !important;
+        padding: 0.8rem 1rem !important;
+        border-radius: 6px !important;
+        margin: 0.2rem 0 !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        text-align: center !important;
     }
 
     #nav-menu a:hover {
-        background-color: var(--orange);
+        background-color: var(--orange) !important;
+        transform: none !important;
     }
 
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .logo h1 {
-        font-size: 1.5rem;
+    /* Hero responsive */
+    .hero {
+        padding: 4rem 1rem !important;
     }
 
     .hero h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem !important;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
     }
 
+    /* Container responsive */
     .container {
-        padding: 1rem;
+        padding: 1rem !important;
     }
 
+    /* Cards responsive */
+    .cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Submenu responsive */
     .submenu {
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 0 1rem;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        padding: 0 1rem !important;
     }
 
+    /* Social links responsive */
     .social-links {
-        gap: 1rem;
+        gap: 1rem !important;
     }
 
     .social-link {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.5rem !important;
     }
 
-    /* ===== RESPONSIVE CARROUSEL ===== */
+    /* Carrousel responsive */
     .carousel-container {
-        max-width: 100%;
-        margin: 20px auto;
-        border-radius: 10px;
+        max-width: 100% !important;
+        margin: 20px auto !important;
+        border-radius: 10px !important;
     }
     
     .carousel-slide {
-        height: 250px;
+        height: 250px !important;
     }
     
     .carousel-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 18px !important;
     }
     
     .carousel-nav.prev {
-        left: 10px;
+        left: 10px !important;
     }
     
     .carousel-nav.next {
-        right: 10px;
+        right: 10px !important;
     }
     
     .slide-caption {
-        font-size: 14px;
-        padding: 20px 15px;
+        font-size: 14px !important;
+        padding: 20px 15px !important;
     }
 
     .indicator {
-        width: 10px;
-        height: 10px;
+        width: 10px !important;
+        height: 10px !important;
     }
 }
 
+/* Très petits écrans */
 @media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem !important;
+    }
+    
+    .mobile-menu-btn {
+        min-width: 45px !important;
+        min-height: 40px !important;
+        font-size: 1.1rem !important;
+        padding: 0.5rem 0.7rem !important;
+    }
+
+    #nav-menu {
+        min-width: 180px !important;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem !important;
+    }
+
+    /* Submenu en colonne sur très petits écrans */
     .submenu {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column !important;
+        align-items: center !important;
     }
     
     .submenu button {
-        width: 200px;
+        width: 200px !important;
     }
     
-    /* ===== TRÈS PETIT ÉCRAN CARROUSEL ===== */
+    /* Carrousel très petit écran */
     .carousel-slide {
-        height: 200px;
+        height: 200px !important;
     }
 
     .carousel-nav {
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 16px !important;
     }
 
     .slide-caption {
-        font-size: 13px;
-        padding: 15px 10px;
+        font-size: 13px !important;
+        padding: 15px 10px !important;
     }
 
     .carousel-indicators {
-        bottom: 15px;
-        gap: 8px;
+        bottom: 15px !important;
+        gap: 8px !important;
     }
 }
