@@ -323,6 +323,15 @@ section h2::after {
     animation: fadeIn 0.5s ease-in;
 }
 
+.activity-content p {
+    margin-bottom: 20px;
+}
+
+.activity-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* ============ CARROUSEL - STYLES ============ */
 
 .carousel-container {
@@ -469,7 +478,7 @@ section h2::after {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     margin: 3rem 0;
 }
 
@@ -485,6 +494,18 @@ section h2::after {
     font-size: 2rem;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+.hashtag-text {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--blue);
 }
 
 .facebook { background:  linear-gradient(45deg, #1877f2, #166fe5, #1464d8, #1259cb, #0e4ebe) }
