@@ -1,28 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
     <title>Châteaubourg Canoë Kayak</title>
+    <meta name="description" content="Club de canoë-kayak à Châteaubourg (35). Découvrez nos activités : kayak de mer, rivières, esquimautage, kayak polo et pagaies couleur. Rejoignez-nous !">
+    <meta name="keywords" content="canoë kayak Châteaubourg, club nautique Ille-et-Vilaine, kayak mer Bretagne, pagaies couleur, esquimautage, kayak polo, sports nautiques 35">
+    <meta name="author" content="Châteaubourg Canoë Kayak">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Châteaubourg Canoë Kayak - Club de sports nautiques en Bretagne">
+    <meta property="og:description" content="Club de canoë-kayak à Châteaubourg (35). Découvrez nos activités : kayak de mer, rivières, esquimautage, kayak polo et pagaies couleur.">
+    <meta property="og:image" content="img/Logo_club_transparent.png">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Châteaubourg Canoë Kayak",
+        "description": "Club de canoë-kayak proposant des activités nautiques variées : kayak de mer, rivières, esquimautage, kayak polo et formations pagaies couleur.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "11 Rue Louis Pasteur",
+            "addressLocality": "Châteaubourg",
+            "addressRegion": "Bretagne",
+            "postalCode": "35220",
+            "addressCountry": "FR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "48.1148",
+            "longitude": "-1.4044"
+        },
+        "logo": "img/Logo_club_transparent.png",
+        "sameAs": [
+            "https://www.facebook.com/kayak.chateaubourg",
+            "https://www.instagram.com/chateaubourgcanoekayak/"
+        ],
+        "sport": "kayak"
+    }
+    </script>
+
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="img/Logo_club_transparent.png" as="image">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
                 <div class="logo-placeholder">
-                    <img src="img/Logo_club_transparent.png" alt="Châteaubourg Canoë Kayak Logo" class="logo-image">
+                    <img src="img/Logo_club_transparent.png" alt="Châteaubourg Canoë Kayak Logo" class="logo-image" width="60" height="60">
                 </div>
                 <h1 class="logo-font">Châteaubourg Canoë-Kayak</h1>
             </div>
-            <nav>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                    <i class="fa-solid fa-water"></i>
+            <nav role="navigation" aria-label="Navigation principale">
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Ouvrir le menu de navigation">
+                    <i class="fa-solid fa-water" aria-hidden="true"></i>
                 </button>
                 <ul id="nav-menu">
-                    <li><a href="index.html" onclick="showPage('accueil')">Accueil</a></li>
+                    <li><a href="index.html" onclick="showPage('accueil')" aria-current="page">Accueil</a></li>
                     <li><a href="activites.html">Activités</a></li>
                     <li><a href="vie-club.html">Vie du club</a></li>
                     <li><a href="liens.html">Liens</a></li>
@@ -39,46 +87,46 @@
                 <div class="container">
                     <h2 class="logo-font">Bienvenue au Club de Canoë-Kayak</h2>
                     <p>Situez à Châteaubourg, venez découvrir les plaisirs de la navigation sur rivières et en mer au sein de notre club.</p>
-                    <a href="activites.html" class="cta-button" onclick="showPage('activites')">Découvrir nos activités</a>
+                    <a href="activites.html" class="cta-button" onclick="showPage('activites')" aria-label="Découvrir nos activités">Découvrir nos activités</a>
                 </div>
             </section>
 
             <div class="container">
-                <section>
-                    <h2>Nos activités</h2>
+                <section aria-labelledby="nos-activites">
+                    <h2 id="nos-activites">Nos activités</h2>
                     <div class="cards-grid">
-                        <div class="card">
-                            <div class="card-icon">🥇</div>
+                        <article class="card">
+                            <div class="card-icon" aria-hidden="true">🥇</div>
                             <h3>Pagaies Couleur</h3>
                             <p>Faites le passage de pagaies couleur pour confirmer votre niveau.</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon">🌊</div>
+                        </article>
+                        <article class="card">
+                            <div class="card-icon" aria-hidden="true">🌊</div>
                             <h3>Kayak de mer</h3>
                             <p>Vivez l'aventure en mer avec nos sorties kayak sur la côte Bretonne.</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon">🚣</div>
+                        </article>
+                        <article class="card">
+                            <div class="card-icon" aria-hidden="true">🚣</div>
                             <h3>Rivières</h3>
                             <p>Randonnées ou eau vive en fonction de votre niveau et de votre adaptabilité, descendez des rivières de façon plus sportives.</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon">🤸</div>
+                        </article>
+                        <article class="card">
+                            <div class="card-icon" aria-hidden="true">🤸</div>
                             <h3>Esquimautage</h3>
                             <p>Nous proposons des séances d'esquimautage en piscine pour pouvoir apprendre et peaufiner sa tecnhique.</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon">🏐</div>
+                        </article>
+                        <article class="card">
+                            <div class="card-icon" aria-hidden="true">🏐</div>
                             <h3>Kayak polo</h3>
                             <p>Sport collectif dynamique mêlant kayak et ballon dans une ambiance combativement drôle.</p>
-                        </div>
+                        </article>
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2024 Châteaubourg Canoë Kayak - Tous droits réservés</p>
             <p>Site créé avec passion pour promouvoir les sports nautiques</p>

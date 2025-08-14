@@ -474,6 +474,30 @@ section h2::after {
     color: var(--orange);
 }
 
+/* Contact section - nouveaux styles ajoutés */
+.contact-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.contact-card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.map-container {
+    margin-top: 1rem;
+}
+
+.map-container iframe {
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+
 /* Social links */
 .social-links {
     display: flex;
@@ -515,6 +539,10 @@ section h2::after {
 .social-link:hover {
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+address {
+    font-style: normal;
 }
 
 /* Footer */
@@ -685,6 +713,13 @@ footer {
         font-size: 1.5rem !important;
     }
 
+    /* Contact responsive - nouveaux styles ajoutés */
+    .map-container iframe {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: 300px !important;
+    }
+
     /* Carrousel responsive */
     .carousel-container {
         max-width: 100% !important;
@@ -740,6 +775,13 @@ footer {
 
     .hero h2 {
         font-size: 1.8rem !important;
+    }
+
+    /* Contact très petit écran - nouveaux styles ajoutés */
+    .map-container iframe {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: 250px !important;
     }
 
     /* Submenu en colonne sur très petits écrans */

@@ -3,27 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Châteaubourg Canoë Kayak</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Activités - Châteaubourg Canoë Kayak</title>
+    <meta name="description" content="Découvrez nos activités : sorties rivières, kayak de mer en Bretagne, initiation esquimautage en piscine et kayak polo. Tous niveaux bienvenus !">
+    <meta name="keywords" content="activités kayak Châteaubourg, sorties rivières, kayak mer Bretagne, esquimautage piscine, kayak polo, activités nautiques Ille-et-Vilaine">
+    <meta name="author" content="Châteaubourg Canoë Kayak">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Activités - Châteaubourg Canoë Kayak">
+    <meta property="og:description" content="Découvrez nos activités : sorties rivières, kayak de mer en Bretagne, initiation esquimautage en piscine et kayak polo. Tous niveaux bienvenus !">
+    <meta property="og:image" content="img/Logo_club_transparent.png">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Activités du club de canoë-kayak",
+        "description": "Page détaillant toutes les activités proposées par le club : sorties rivières, kayak de mer, esquimautage et kayak polo.",
+        "mainEntity": {
+            "@type": "SportsActivityLocation",
+            "name": "Châteaubourg Canoë Kayak",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "11 Rue Louis Pasteur",
+                "addressLocality": "Châteaubourg",
+                "addressRegion": "Bretagne",
+                "postalCode": "35220",
+                "addressCountry": "FR"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "48.1148",
+                "longitude": "-1.4044"
+            },
+            "logo": "img/Logo_club_transparent.png",
+            "sameAs": [
+                "https://www.facebook.com/kayak.chateaubourg",
+                "https://www.instagram.com/chateaubourgcanoekayak/"
+            ],
+            "sport": "Canoeing",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Activités nautiques",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Sorties Rivières",
+                            "description": "Randonnées et eau vive pour tous niveaux sur les rivières du Grand Ouest"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Kayak de Mer",
+                            "description": "Exploration de la côte bretonne en kayak de mer pour tous niveaux"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Initiation Esquimautage",
+                            "description": "Apprentissage de la technique d'esquimautage en piscine avec encadrement"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Kayak Polo",
+                            "description": "Sport collectif dynamique mixte et intergénérationnel"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="img/Logo_club_transparent.png" as="image">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
                 <div class="logo-placeholder">
-                    <img src="img/Logo_club_transparent.png" alt="Châteaubourg Canoë Kayak Logo" class="logo-image">
+                    <img src="img/Logo_club_transparent.png" alt="Châteaubourg Canoë Kayak Logo" class="logo-image" width="60" height="60">
                 </div>
                 <h1 class="logo-font">Châteaubourg Canoë-Kayak</h1>
             </div>
-            <nav>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                    <i class="fa-solid fa-water"></i>
+            <nav role="navigation" aria-label="Navigation principale">
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Ouvrir le menu de navigation">
+                    <i class="fa-solid fa-water" aria-hidden="true"></i>
                 </button>
                 <ul id="nav-menu">
                     <li><a href="index.html" onclick="showPage('accueil')">Accueil</a></li>
-                    <li><a href="activites.html">Activités</a></li>
+                    <li><a href="activites.html" aria-current="page">Activités</a></li>
                     <li><a href="vie-club.html">Vie du club</a></li>
                     <li><a href="liens.html">Liens</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -36,16 +124,16 @@
         <!-- Page Activités -->
         <div id="activites" class="page active">
             <div class="container">
-                <section>
-                    <h2>Nos Activités</h2>
-                    <div class="submenu">
-                        <button class="active" onclick="showActivity('rivieres', event)">Rivières</button>
-                        <button onclick="showActivity('mer', event)">Mer</button>
-                        <button onclick="showActivity('esquimautage', event)">Initiation Esquimautage</button>
-                        <button onclick="showActivity('polo', event)">Kayak Polo</button>
+                <section aria-labelledby="nos-activites">
+                    <h2 id="nos-activites">Nos Activités</h2>
+                    <div class="submenu" role="tablist" aria-label="Types d'activités">
+                        <button class="active" onclick="showActivity('rivieres', event)" role="tab" aria-selected="true" aria-controls="rivieres">Rivières</button>
+                        <button onclick="showActivity('mer', event)" role="tab" aria-selected="false" aria-controls="mer">Mer</button>
+                        <button onclick="showActivity('esquimautage', event)" role="tab" aria-selected="false" aria-controls="esquimautage">Initiation Esquimautage</button>
+                        <button onclick="showActivity('polo', event)" role="tab" aria-selected="false" aria-controls="polo">Kayak Polo</button>
                     </div>
 
-                    <div id="rivieres" class="activity-content active">
+                    <div id="rivieres" class="activity-content active" role="tabpanel" aria-labelledby="tab-rivieres">
                         <h3>Sorties Rivières</h3>
                         <p>Descendez les rivières locales dans une ambiance conviviale. Nos sorties rivières sont l'occasion parfaite de découvrir la navigation en eau vive ou lors de randonnées.</p>
                         <ul>
@@ -56,31 +144,31 @@
                             <li>Sorties selon les conditions météorologiques</li>
                         </ul>
                         <div class="carousel-container">
-                            <div class="carousel" id="carousel-rivieres">
+                            <div class="carousel" id="carousel-rivieres" role="img" aria-label="Galerie photos sorties rivières">
                                 <div class="carousel-slide">
-                                    <img src="img/rando-eglise.jpg" alt="Sorties de groupe de kayak">
+                                    <img src="img/rando-eglise.jpg" alt="Groupe de kayakistes lors d'une sortie rivière près d'une église" loading="lazy">
                                     <div class="slide-caption">Sortie groupe en rivière</div>
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="img/rando-armilin.jpg" alt="randonnees rivieres">
+                                    <img src="img/rando-armilin.jpg" alt="Randonnée en kayak sur rivière dans un cadre naturel" loading="lazy">
                                     <div class="slide-caption">Randonnées</div>
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="img/surf-3.jpg" alt="kayak sportif">
+                                    <img src="img/surf-3.jpg" alt="Kayak sportif en eau vive" loading="lazy">
                                     <div class="slide-caption">Activités sportives</div>
                                 </div>
                             </div>
-                            <button class="carousel-nav prev" onclick="changeSlide('rivieres', -1)">‹</button>
-                            <button class="carousel-nav next" onclick="changeSlide('rivieres', 1)">›</button>
-                            <div class="carousel-indicators">
-                                <div class="indicator active" onclick="goToSlide('rivieres', 0)"></div>
-                                <div class="indicator" onclick="goToSlide('rivieres', 1)"></div>
-                                <div class="indicator" onclick="goToSlide('rivieres', 2)"></div>
+                            <button class="carousel-nav prev" onclick="changeSlide('rivieres', -1)" aria-label="Image précédente">‹</button>
+                            <button class="carousel-nav next" onclick="changeSlide('rivieres', 1)" aria-label="Image suivante">›</button>
+                            <div class="carousel-indicators" role="tablist" aria-label="Indicateurs de slides">
+                                <div class="indicator active" onclick="goToSlide('rivieres', 0)" role="tab" aria-label="Image 1"></div>
+                                <div class="indicator" onclick="goToSlide('rivieres', 1)" role="tab" aria-label="Image 2"></div>
+                                <div class="indicator" onclick="goToSlide('rivieres', 2)" role="tab" aria-label="Image 3"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="mer" class="activity-content">
+                    <div id="mer" class="activity-content" role="tabpanel" aria-labelledby="tab-mer">
                         <h3>Kayak de Mer</h3>
                         <p>Explorez la côte bretonne en kayak de mer ! Une activité unique pour découvrir des paysages marins et observer la vie marine.</p>
                         <ul>
@@ -89,31 +177,31 @@
                             <li>Une flotte de kayak de mer</li>
                         </ul>
                         <div class="carousel-container">
-                            <div class="carousel" id="carousel-mer">
+                            <div class="carousel" id="carousel-mer" role="img" aria-label="Galerie photos kayak de mer">
                                 <div class="carousel-slide">
-                                    <img src="img/sea.6.jpg" alt="Kayak de mer">
+                                    <img src="img/sea.6.jpg" alt="Kayakiste en mer avec paysage côtier breton" loading="lazy">
                                     <div class="slide-caption">Kayak en mer</div>
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="img/sea4.jpg" alt="Groupe mer">
+                                    <img src="img/sea4.jpg" alt="Groupe de kayakistes en sortie mer" loading="lazy">
                                     <div class="slide-caption">Sorties en groupe</div>
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="img/sea.7.jpg" alt="Côtes bretonnes">
+                                    <img src="img/sea.7.jpg" alt="Panorama des côtes bretonnes vues depuis un kayak" loading="lazy">
                                     <div class="slide-caption">Côtes bretonnes</div>
                                 </div>
                             </div>
-                            <button class="carousel-nav prev" onclick="changeSlide('mer', -1)">‹</button>
-                            <button class="carousel-nav next" onclick="changeSlide('mer', 1)">›</button>
-                            <div class="carousel-indicators">
-                                <div class="indicator active" onclick="goToSlide('mer', 0)"></div>
-                                <div class="indicator" onclick="goToSlide('mer', 1)"></div>
-                                <div class="indicator" onclick="goToSlide('mer', 2)"></div>
+                            <button class="carousel-nav prev" onclick="changeSlide('mer', -1)" aria-label="Image précédente">‹</button>
+                            <button class="carousel-nav next" onclick="changeSlide('mer', 1)" aria-label="Image suivante">›</button>
+                            <div class="carousel-indicators" role="tablist" aria-label="Indicateurs de slides">
+                                <div class="indicator active" onclick="goToSlide('mer', 0)" role="tab" aria-label="Image 1"></div>
+                                <div class="indicator" onclick="goToSlide('mer', 1)" role="tab" aria-label="Image 2"></div>
+                                <div class="indicator" onclick="goToSlide('mer', 2)" role="tab" aria-label="Image 3"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="esquimautage" class="activity-content">
+                    <div id="esquimautage" class="activity-content" role="tabpanel" aria-labelledby="tab-esquimautage">
                         <h3>Initiation Esquimautage</h3>
                         <p>Apprenez la technique du retournement de l'esquimautage ! Cette compétence essentielle vous permettra de gagner en autonomie et en sécurité sur l'eau.</p>
                         <ul>
@@ -122,53 +210,53 @@
                             <li>Des encadrants présents à chaque étape</li>
                         </ul>
                         <div class="carousel-container">
-                            <div class="carousel" id="carousel-esquimautage">
+                            <div class="carousel" id="carousel-esquimautage" role="img" aria-label="Galerie photos esquimautage">
                                 <div class="carousel-slide">
-                                    <img src="img/esquimautage-1.jpg" alt="Esquimautage piscine">
+                                    <img src="img/esquimautage-1.jpg" alt="Formation esquimautage en piscine avec encadrant" loading="lazy">
                                     <div class="slide-caption">Formation en piscine</div>
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=300&fit=crop" alt="Technique esquimautage">
+                                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=300&fit=crop" alt="Démonstration technique d'esquimautage en kayak" loading="lazy">
                                     <div class="slide-caption">Technique d'esquimautage</div>
                                 </div>
                             </div>
-                            <button class="carousel-nav prev" onclick="changeSlide('esquimautage', -1)">‹</button>
-                            <button class="carousel-nav next" onclick="changeSlide('esquimautage', 1)">›</button>
-                            <div class="carousel-indicators">
-                                <div class="indicator active" onclick="goToSlide('esquimautage', 0)"></div>
-                                <div class="indicator" onclick="goToSlide('esquimautage', 1)"></div>
-                                <div class="indicator" onclick="goToSlide('esquimautage', 2)"></div>
+                            <button class="carousel-nav prev" onclick="changeSlide('esquimautage', -1)" aria-label="Image précédente">‹</button>
+                            <button class="carousel-nav next" onclick="changeSlide('esquimautage', 1)" aria-label="Image suivante">›</button>
+                            <div class="carousel-indicators" role="tablist" aria-label="Indicateurs de slides">
+                                <div class="indicator active" onclick="goToSlide('esquimautage', 0)" role="tab" aria-label="Image 1"></div>
+                                <div class="indicator" onclick="goToSlide('esquimautage', 1)" role="tab" aria-label="Image 2"></div>
+                                <div class="indicator" onclick="goToSlide('esquimautage', 2)" role="tab" aria-label="Image 3"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="polo" class="activity-content">
+                    <div id="polo" class="activity-content" role="tabpanel" aria-labelledby="tab-polo">
                         <h3>Kayak Polo</h3>
                         <p>Sport collectif dynamique ! Le kayak polo combine habiletés techniques du kayak et esprit d'équipe dans un sport aquatique unique.</p>
                         <ul>
                             <li>Sport mixte et intergénérationnel</li>
                         </ul>
                         <div class="carousel-container">
-                            <div class="carousel" id="carousel-polo">
+                            <div class="carousel" id="carousel-polo" role="img" aria-label="Galerie photos kayak polo">
                                 <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=300&fit=crop" alt="Match kayak polo">
+                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=300&fit=crop" alt="Match de kayak polo avec joueurs en action" loading="lazy">
                                     <div class="slide-caption">Match de kayak polo</div>
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1551524164-75ca2ca0f853?w=600&h=300&fit=crop" alt="Équipe polo">
+                                    <img src="https://images.unsplash.com/photo-1551524164-75ca2ca0f853?w=600&h=300&fit=crop" alt="Équipe de kayak polo montrant l'esprit collectif" loading="lazy">
                                     <div class="slide-caption">Esprit d'équipe</div>
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=300&fit=crop" alt="Technique polo">
+                                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=300&fit=crop" alt="Techniques et gestes du kayak polo" loading="lazy">
                                     <div class="slide-caption">Techniques de polo</div>
                                 </div>
                             </div>
-                            <button class="carousel-nav prev" onclick="changeSlide('polo', -1)">‹</button>
-                            <button class="carousel-nav next" onclick="changeSlide('polo', 1)">›</button>
-                            <div class="carousel-indicators">
-                                <div class="indicator active" onclick="goToSlide('polo', 0)"></div>
-                                <div class="indicator" onclick="goToSlide('polo', 1)"></div>
-                                <div class="indicator" onclick="goToSlide('polo', 2)"></div>
+                            <button class="carousel-nav prev" onclick="changeSlide('polo', -1)" aria-label="Image précédente">‹</button>
+                            <button class="carousel-nav next" onclick="changeSlide('polo', 1)" aria-label="Image suivante">›</button>
+                            <div class="carousel-indicators" role="tablist" aria-label="Indicateurs de slides">
+                                <div class="indicator active" onclick="goToSlide('polo', 0)" role="tab" aria-label="Image 1"></div>
+                                <div class="indicator" onclick="goToSlide('polo', 1)" role="tab" aria-label="Image 2"></div>
+                                <div class="indicator" onclick="goToSlide('polo', 2)" role="tab" aria-label="Image 3"></div>
                             </div>
                         </div>
                     </div>
@@ -177,7 +265,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Châteaubourg Canoë Kayak - Tous droits réservés</p>
             <p>Site créé avec passion pour promouvoir les sports nautiques</p>
