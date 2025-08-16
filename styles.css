@@ -545,14 +545,50 @@ address {
     font-style: normal;
 }
 
-/* Footer */
-footer {
-    background: var(--dark-gray);
+/* ===== FOOTER ===== */
+ooter {
+    background: var(--blue);
     color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.95rem;
 }
+
+footer .container,
+footer .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+footer .container p {
+    margin: 0;
+}
+
+footer .footer-links a {
+    color: var(--orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: white;
+}
+
+/* Bloc contact en dessous, plus discret */
+footer .footer-contact {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+    opacity: 0.8;
+}
+
+footer .footer-contact p {
+    margin: 0.2rem 0;
+}
+
 
 /* ============ MEDIA QUERIES SIMPLIFIÉES ============ */
 
@@ -754,6 +790,14 @@ footer {
         width: 10px !important;
         height: 10px !important;
     }
+
+    /* Footer responsive */
+    footer .container,
+    footer .footer-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
 }
 
 /* Très petits écrans */
