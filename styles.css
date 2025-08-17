@@ -546,7 +546,7 @@ address {
 }
 
 /* ===== FOOTER ===== */
-ooter {
+footer {
     background: var(--blue);
     color: white;
     padding: 2rem 1rem;
@@ -578,14 +578,14 @@ footer .footer-links a:hover {
 }
 
 /* Bloc contact en dessous, plus discret */
-footer .footer-contact {
+footer {
     text-align: center;
     font-size: 0.85rem;
     margin-top: 1.5rem;
     opacity: 0.8;
 }
 
-footer .footer-contact p {
+footer {
     margin: 0.2rem 0;
 }
 
@@ -791,13 +791,47 @@ footer .footer-contact p {
         height: 10px !important;
     }
 
+    /* Legal content responsive */
+
+    .legal-content {
+        padding: 1rem;
+    }
+    
+    .legal-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .legal-content h2 {
+        font-size: 1.3rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+    
+    .legal-content ul {
+        padding-left: 1rem;
+    }
+    
+    .legal-content li {
+        margin-bottom: 0.5rem;
+    }
+
     /* Footer responsive */
     footer .container,
     footer .footer-links {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 0.5rem;
+        margin-top: 1rem
     }
-
+    
+    /* Masquer les | en mode responsive */
+    .footer-links {
+        font-size: 0; /* Masque le texte entre les balises <a> */
+    }
+    
+    .footer-links a {
+        font-size: 0.95rem; /* Restaure la taille de police pour les liens */
+        display: block; /* Force les liens en bloc pour qu'ils se superposent */
+    }
 }
 
 /* Très petits écrans */
@@ -857,5 +891,15 @@ footer .footer-contact p {
     .carousel-indicators {
         bottom: 15px !important;
         gap: 8px !important;
+    }
+
+    /* Legal content repsonsive */
+
+    .legal-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .legal-content h2 {
+        font-size: 1.2rem;
     }
 }
